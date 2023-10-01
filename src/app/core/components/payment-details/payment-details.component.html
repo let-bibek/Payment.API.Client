@@ -2,18 +2,18 @@
   <div class="col-6 card mr-2 p-2">
     <app-payment-details-form />
   </div>
-  <div class="col-6 card">
+  <div class="col-6 card scroll-y">
     <ul class="list-group p-2 strip">
       <li
         class="list-group-item d-flex justify-content-between align-items-start border rounded mb-2 px-4 py-3"
         *ngFor="let paymentDetails of service.list"
       >
-        <div class="flex-grow-1 hover-pointer">
+        <div class="flex-grow-1 hover-pointer" (click)="paymentDetailItemClick(paymentDetails)">
           <div class="fw-bold">{{ paymentDetails.cardOwnerName }}</div>
           <div>{{ paymentDetails.cardNumber }}</div>
           <div class="fw-bold">{{ paymentDetails.expirationDate }}</div>
         </div>
-        <span class="text-danger hover-pointer"><i class="fa-solid fa-trash fa-lg"></i></span>
+        <span class="text-danger hover-pointer" (click)="deleteSelected(paymentDetails.id)"><i class="fa-solid fa-trash fa-lg"></i></span>
       </li>
     </ul>
   </div>

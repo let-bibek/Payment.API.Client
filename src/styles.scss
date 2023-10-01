@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-color:#f7f7f7;
+@import 'ngx-toastr/toastr';
+body {
+  background-color: #f7f7f7;
 }
 
 .hover-pointer:hover {
@@ -19,9 +20,17 @@ form {
   }
 }
 
-.fixed-bg{
-    max-width: 900px;
-    margin-inline: auto;
-    background-color: #fff;
-    padding: 2em;
+.fixed-bg {
+  max-width: 900px;
+  margin-inline: auto;
+  background-color: #fff;
+  padding: 2em;
+}
+.scroll-y {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+form.submitted input.ng-invalid {
+  border: 2px solid red;
 }

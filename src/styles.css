@@ -24,4 +24,13 @@ form input::placeholder {
   margin-inline: auto;
   background-color: #fff;
   padding: 2em;
+}
+
+.scroll-y {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+form.ng-submitted input.ng-invalid {
+  border: 2px solid red;
 }/*# sourceMappingURL=styles.css.map */
